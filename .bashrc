@@ -13,6 +13,16 @@ if [ -x /usr/bin/dircolors ]; then
     alias egrep='egrep --color=auto'
 fi
 
-export PATH=$PATH:~/bin
+# Execute custom machine alias file
+if [ -a ~/.alias ]; then
+    . ~/.alias
+fi
 
+
+
+alias lessl='less `ls -l | head -1`'
+alias catl='less `ls -l | head -1`'
+alias taill='less `ls -l | head -1`'
+
+export PATH=$PATH:~/bin
 
