@@ -19,3 +19,10 @@ let g:netrw_winsize = 25
 let g:netrw_liststyle = 3
 let g:netrw_list_hide='.*\.swp$'
 let g:netrw_chgwin=2
+
+
+"copy (write) highlighted text to .vimbuffer
+vmap <C-c> y:new ~/.vimbuffer<CR>VGp:x<CR> \| :!cat ~/.vimbuffer \| clip.exe <CR><CR>
+" paste from buffer
+map <C-v> :r ~/.vimbuffer<CR>
+
